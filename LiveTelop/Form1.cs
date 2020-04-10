@@ -1008,7 +1008,7 @@ namespace LiveTelop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NHKsokuhoCheck("テストああああああああああああああああああ");
+            NHKsokuhoCheck("テスト");
         }
 
         private void 設定ToolStripMenuItem_Click(object sender, EventArgs e)
