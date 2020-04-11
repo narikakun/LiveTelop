@@ -77,6 +77,7 @@ namespace LiveTelop
             checkBox12.Checked = Properties.Settings.Default.eew_forecast_wav;
             checkBox13.Checked = Properties.Settings.Default.eew_warning_wav;
             textBox8.Text = Convert.ToString(Properties.Settings.Default.bouyomi_type);
+            checkBox14.Checked = Properties.Settings.Default.eew_form;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -116,6 +117,7 @@ namespace LiveTelop
             Properties.Settings.Default.eew_forecast_wav = checkBox12.Checked;
             Properties.Settings.Default.eew_warning_wav = checkBox13.Checked;
             Properties.Settings.Default.bouyomi_type = Convert.ToInt32(textBox8.Text);
+            Properties.Settings.Default.eew_form = checkBox14.Checked;
             Properties.Settings.Default.Save();
         }
 
@@ -522,6 +524,18 @@ namespace LiveTelop
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
             f1.bouyomi_type = Convert.ToInt32(textBox8.Text);
+        }
+
+        private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox14.Checked == true)
+            {
+                f1.eew_form = true;
+            }
+            else
+            {
+                f1.eew_form = false;
+            }
         }
     }
 }

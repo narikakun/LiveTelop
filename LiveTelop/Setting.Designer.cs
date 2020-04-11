@@ -89,6 +89,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.label12 = new System.Windows.Forms.Label();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -340,6 +341,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.checkBox14);
             this.tabPage1.Controls.Add(this.checkBox13);
             this.tabPage1.Controls.Add(this.checkBox12);
             this.tabPage1.Controls.Add(this.label6);
@@ -751,6 +753,17 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "ver.1.0.0.0";
             // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(180, 64);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(104, 23);
+            this.checkBox14.TabIndex = 9;
+            this.checkBox14.Text = "某配信風";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            // 
             // Setting
             // 
             this.AllowDrop = true;
@@ -864,5 +877,6 @@
         private System.Windows.Forms.CheckBox checkBox13;
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.CheckBox checkBox14;
     }
 }

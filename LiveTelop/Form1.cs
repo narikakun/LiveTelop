@@ -49,6 +49,8 @@ namespace LiveTelop
         public string bouyomi_port = Properties.Settings.Default.bouyomi_port;
         public bool eew_forecast_wav = Properties.Settings.Default.eew_forecast_wav;
         public bool eew_warning_wav = Properties.Settings.Default.eew_warning_wav;
+        public bool eew_form = Properties.Settings.Default.eew_form;
+        public bool eew_form_show = false;
 
         public Form1()
         {
@@ -840,6 +842,11 @@ namespace LiveTelop
                     telop_text.Location = new Point(telop_panel.Size.Width, 1);
                     bool eew_status_flg = false;
                     telop_timer.BackColor = TransparencyKey;
+                    if (!eew_form_show)
+                    {
+                        eew_form eew_form = new eew_form();
+                        eew_form.Show();
+                    }
                     if (eewJson(eew_json).Head.AlertFlg == "予報")
                     {
                         if (eew_forecast == true)

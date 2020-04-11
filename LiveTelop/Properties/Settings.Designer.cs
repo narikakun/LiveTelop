@@ -323,5 +323,17 @@ namespace LiveTelop.Properties {
                 this["eew_warning_wav"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool eew_form {
+            get {
+                return ((bool)(this["eew_form"]));
+            }
+            set {
+                this["eew_form"] = value;
+            }
+        }
     }
 }
