@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "eew_form";
             this.Text = "eew_form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.eew_form_FormClosed);
             this.Load += new System.EventHandler(this.eew_form_Load);
             this.ResumeLayout(false);
 

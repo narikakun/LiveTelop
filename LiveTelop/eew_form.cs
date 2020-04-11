@@ -23,5 +23,10 @@ namespace LiveTelop
         {
             f1.eew_form_show = true;
         }
+
+        private void eew_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            f1.eew_form_show = false;
+        }
     }
 }

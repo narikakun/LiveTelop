@@ -1021,7 +1021,7 @@ namespace LiveTelop
         private void 設定ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Setting stng = new Setting(this);
-            stng.Dispose();
+            stng.Show();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
