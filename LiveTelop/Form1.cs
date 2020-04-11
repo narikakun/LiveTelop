@@ -844,8 +844,11 @@ namespace LiveTelop
                     telop_timer.BackColor = TransparencyKey;
                     if (!eew_form_show)
                     {
-                        eew_form eew_form = new eew_form(this);
-                        eew_form.Show();
+                        if (eew_form)
+                        {
+                            eew_form eew_form = new eew_form(this);
+                            eew_form.Show();
+                        }
                     }
                     if (eewJson(eew_json).Head.AlertFlg == "予報")
                     {
