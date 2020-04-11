@@ -844,7 +844,7 @@ namespace LiveTelop
                     telop_timer.BackColor = TransparencyKey;
                     if (!eew_form_show)
                     {
-                        eew_form eew_form = new eew_form();
+                        eew_form eew_form = new eew_form(this);
                         eew_form.Show();
                     }
                     if (eewJson(eew_json).Head.AlertFlg == "予報")
@@ -1021,7 +1021,6 @@ namespace LiveTelop
         private void 設定ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Setting stng = new Setting(this);
-            stng.ShowDialog(this);
             stng.Dispose();
         }
 
