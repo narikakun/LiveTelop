@@ -65,6 +65,12 @@ namespace LiveTelop
             BetaCheck();
             EEW_DemoCheck();
             ef = new eew_form(this);
+            if (Properties.Settings.Default.IsUpgrade == false)
+            {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.IsUpgrade = true;
+                Properties.Settings.Default.Save();
+            }
         }
         
         public void BetaCheck()
