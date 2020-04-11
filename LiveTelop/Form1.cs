@@ -971,6 +971,9 @@ namespace LiveTelop
                 {
                     if (eew_status == true)
                     {
+                        eew_form_show = false;
+                        ef.Dispose();
+                        ef = new eew_form(this);
                         eew_status = false;
                         TelopLevelCheck();
                     }
