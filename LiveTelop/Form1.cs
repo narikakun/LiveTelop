@@ -49,8 +49,9 @@ namespace LiveTelop
         public string bouyomi_port = Properties.Settings.Default.bouyomi_port;
         public bool eew_forecast_wav = Properties.Settings.Default.eew_forecast_wav;
         public bool eew_warning_wav = Properties.Settings.Default.eew_warning_wav;
-        public bool eew_form = Properties.Settings.Default.eew_form;
+        public bool eew_forms = Properties.Settings.Default.eew_form;
         public bool eew_form_show = false;
+        eew_form ef;
 
         public Form1()
         {
@@ -63,6 +64,7 @@ namespace LiveTelop
             telop_panel.BackColor = System.Drawing.Color.FromArgb(255, 224, 192);
             BetaCheck();
             EEW_DemoCheck();
+            ef = new eew_form(this);
         }
         
         public void BetaCheck()
@@ -842,14 +844,6 @@ namespace LiveTelop
                     telop_text.Location = new Point(telop_panel.Size.Width, 1);
                     bool eew_status_flg = false;
                     telop_timer.BackColor = TransparencyKey;
-                    if (!eew_form_show)
-                    {
-                        if (eew_form)
-                        {
-                            eew_form eew_form = new eew_form(this);
-                            eew_form.Show();
-                        }
-                    }
                     if (eewJson(eew_json).Head.AlertFlg == "予報")
                     {
                         if (eew_forecast == true)
@@ -932,6 +926,42 @@ namespace LiveTelop
                         Bouyomi(telop_text.Text);
                         //telop_text.Text = "■ 緊急地震速報 " + eewJson(eew_json).Head.AlertFlg + "第" + eewJson(eew_json).Head.ReportNum + "報  ■ " + eew_time + "ごろ、" + eewJson(eew_json).Body.RegionName + "で最大震度" + eewJson(eew_json).Body.Calcintensity + "と推定される地震が発生した模様です。震源の深さは、" + eewJson(eew_json).Body.Depth + "、マグニチュードは" + eewJson(eew_json).Body.Magunitude + "と推定されます。";
                         eew_status = true;
+                        if (eew_forms)
+                        {
+                            if (!eew_form_show)
+                            {
+                                ef.Show();
+                            }
+                            var cal = eewJson(eew_json).Body.Calcintensity;
+                            int plus = 0;
+                            if (cal == "5弱" || cal == "5強" || cal == "6弱" || cal == "6強")
+                            {
+                                plus = 30;
+                            }
+                            ef.label6.Text = eewJson(eew_json).Body.Calcintensity;
+                            ef.label7.Text = eewJson(eew_json).Body.Magunitude;
+                            ef.label8.Text = eewJson(eew_json).Body.RegionName;
+                            ef.label3.Location = new Point(337 + plus, ef.label3.Location.Y);
+                            ef.label4.Location = new Point(454 + plus, ef.label4.Location.Y);
+                            ef.label5.Location = new Point(590 + (30 * ef.label8.Text.Length) + plus, ef.label5.Location.Y);
+                            ef.label7.Location = new Point(372 + plus, ef.label7.Location.Y);
+                            ef.label8.Location = new Point(529 + plus, ef.label8.Location.Y);
+                            ef.label9.Location = new Point(ef.label5.Location.X + 148, ef.label5.Location.Y);
+                            ef.label9.Text = eew_time.ToString("HH") + ":" + eew_time.ToString("mm") + "頃";
+                            if (eewJson(eew_json).Body.Magunitude != "" || eewJson(eew_json).Body.Magunitude != "不明")
+                            {
+                                if (float.Parse(eewJson(eew_json).Body.Magunitude) >= 6.5)
+                                {
+                                    ef.BackColor = System.Drawing.Color.FromArgb(250, 245, 0);
+                                    ef.label10.Text = "念の為海岸から離れてください";
+                                }
+                                else
+                                {
+                                    ef.BackColor = System.Drawing.Color.FromArgb(0, 255, 0);
+                                    ef.label10.Text = "";
+                                }
+                            }
+                        }
                         last_requesttime = eewJson(eew_json).Head.RequestTime;
                         last_reportid = eewJson(eew_json).Head.ReportId;
                         last_reportid_flg = eewJson(eew_json).Head.ReportId + eewJson(eew_json).Head.AlertFlg;
@@ -1006,7 +1036,6 @@ namespace LiveTelop
                     if (bouyomi_volume != -1) { sends += "&volume=" + bouyomi_volume; };
                     if (bouyomi_speed != 49) { sends += "&speed=" + bouyomi_speed; };
                     if (bouyomi_pitch != 49) { sends += "&tone=" + bouyomi_pitch; };
-                    Console.WriteLine(sends);
                     wc.DownloadString(sends);
                 }
                 catch (System.Net.WebException)
@@ -1018,7 +1047,9 @@ namespace LiveTelop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NHKsokuhoCheck("テスト");
+            eew_url = "https://api.narikakun.net/eew/warning.php?time=20200213193455";
+            //ef.label6.Text = "7+";
+            //NHKsokuhoCheck("テスト");
         }
 
         private void 設定ToolStripMenuItem_Click(object sender, EventArgs e)

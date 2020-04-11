@@ -530,11 +530,11 @@ namespace LiveTelop
         {
             if (checkBox14.Checked == true)
             {
-                f1.eew_form = true;
+                f1.eew_forms = true;
             }
             else
             {
-                f1.eew_form = false;
+                f1.eew_forms = false;
             }
         }
     }
