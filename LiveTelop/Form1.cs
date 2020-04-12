@@ -53,6 +53,8 @@ namespace LiveTelop
         public bool eew_forms = Properties.Settings.Default.eew_form;
         public bool eew_form_show = false;
         public int eew_form_time = Properties.Settings.Default.eew_form_time;
+        public string eew_m_f = Properties.Settings.Default.eew_m_f;
+        public string eew_m_w = Properties.Settings.Default.eew_m_w;
         eew_form ef;
 
         public Form1()
@@ -67,7 +69,10 @@ namespace LiveTelop
             BetaCheck();
             EEW_DemoCheck();
             ef = new eew_form(this);
-            eew_form_timer.Interval = eew_form_time * 1000;
+            if (eew_form_time != 0)
+            {
+                eew_form_timer.Interval = eew_form_time * 1000;
+            }
             if (Properties.Settings.Default.IsUpgrade == false)
             {
                 Properties.Settings.Default.Upgrade();
@@ -877,7 +882,15 @@ namespace LiveTelop
                             {
                                 if (eew_forecast_wav)
                                 {
-                                    var player = new SoundPlayer(Properties.Resources.eew_f);
+                                    var player = new SoundPlayer();
+                                    if (eew_m_f == "")
+                                    {
+                                        player = new SoundPlayer(Properties.Resources.eew_f);
+                                    }
+                                    else
+                                    {
+                                        player = new SoundPlayer(eew_m_f);
+                                    }
                                     player.Play();
                                 }
                             }
@@ -907,7 +920,15 @@ namespace LiveTelop
                             {
                                 if (eew_warning_wav)
                                 {
-                                    var player = new SoundPlayer(Properties.Resources.eew_w);
+                                    var player = new SoundPlayer();
+                                    if (eew_m_w == "")
+                                    {
+                                        player = new SoundPlayer(Properties.Resources.eew_w);
+                                    }
+                                    else
+                                    {
+                                        player = new SoundPlayer(eew_m_w);
+                                    }
                                     player.Play();
                                 }
                             }

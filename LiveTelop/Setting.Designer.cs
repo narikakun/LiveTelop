@@ -123,6 +123,10 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -746,7 +750,7 @@
             this.tabPage4.Controls.Add(this.checkBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(678, 226);
+            this.tabPage4.Size = new System.Drawing.Size(684, 485);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "開発者用";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -777,6 +781,10 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button9);
+            this.groupBox6.Controls.Add(this.textBox22);
+            this.groupBox6.Controls.Add(this.button8);
+            this.groupBox6.Controls.Add(this.textBox21);
             this.groupBox6.Controls.Add(this.checkBox12);
             this.groupBox6.Controls.Add(this.checkBox13);
             this.groupBox6.Location = new System.Drawing.Point(6, 341);
@@ -1174,6 +1182,46 @@
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "時計設定";
             // 
+            // textBox21
+            // 
+            this.textBox21.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox21.Location = new System.Drawing.Point(121, 28);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(285, 20);
+            this.textBox21.TabIndex = 29;
+            this.textBox21.TextChanged += new System.EventHandler(this.textBox21_TextChanged);
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button8.Location = new System.Drawing.Point(412, 27);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(50, 20);
+            this.button8.TabIndex = 30;
+            this.button8.Text = "開く";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textBox22
+            // 
+            this.textBox22.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox22.Location = new System.Drawing.Point(121, 57);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(285, 20);
+            this.textBox22.TabIndex = 31;
+            this.textBox22.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button9.Location = new System.Drawing.Point(412, 56);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(50, 20);
+            this.button9.TabIndex = 32;
+            this.button9.Text = "開く";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // Setting
             // 
             this.AllowDrop = true;
@@ -1334,5 +1382,9 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Button button8;
     }
 }

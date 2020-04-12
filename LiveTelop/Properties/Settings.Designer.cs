@@ -395,5 +395,29 @@ namespace LiveTelop.Properties {
                 this["EEWSize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string eew_m_f {
+            get {
+                return ((string)(this["eew_m_f"]));
+            }
+            set {
+                this["eew_m_f"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string eew_m_w {
+            get {
+                return ((string)(this["eew_m_w"]));
+            }
+            set {
+                this["eew_m_w"] = value;
+            }
+        }
     }
 }

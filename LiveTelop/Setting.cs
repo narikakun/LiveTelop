@@ -88,6 +88,8 @@ namespace LiveTelop
             {
                 label16.Text = "表示画面表示秒数（" + trackBar7.Value + "秒）";
             }
+            textBox21.Text = Properties.Settings.Default.eew_m_f;
+            textBox22.Text = Properties.Settings.Default.eew_m_w;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -129,6 +131,8 @@ namespace LiveTelop
             Properties.Settings.Default.bouyomi_type = Convert.ToInt32(textBox8.Text);
             Properties.Settings.Default.eew_form = checkBox14.Checked;
             Properties.Settings.Default.eew_form_time = trackBar7.Value;
+            Properties.Settings.Default.eew_m_f = textBox21.Text;
+            Properties.Settings.Default.eew_m_w = textBox22.Text;
             Properties.Settings.Default.Save();
         }
 
@@ -603,6 +607,48 @@ namespace LiveTelop
             textBox1.Text = "2";
             trackBar1.Value = 2;
             f1.scrollspeed = 2;
+        }
+
+        private void textBox21_TextChanged(object sender, EventArgs e)
+        {
+            f1.eew_m_f = textBox21.Text;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "wavファイル(*.wav)|*.wav;";
+            ofd.FilterIndex = 1;
+            ofd.Title = "開くwavファイルを選択してください";
+            ofd.RestoreDirectory = true;
+            ofd.CheckFileExists = true;
+            ofd.CheckPathExists = true;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                textBox21.Text = ofd.FileName;
+                f1.eew_m_f = textBox21.Text;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "wavファイル(*.wav)|*.wav;";
+            ofd.FilterIndex = 1;
+            ofd.Title = "開くwavファイルを選択してください";
+            ofd.RestoreDirectory = true;
+            ofd.CheckFileExists = true;
+            ofd.CheckPathExists = true;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                textBox22.Text = ofd.FileName;
+                f1.eew_m_w = textBox22.Text;
+            }
+        }
+
+        private void textBox22_TextChanged(object sender, EventArgs e)
+        {
+            f1.eew_m_w = textBox22.Text;
         }
     }
 }
