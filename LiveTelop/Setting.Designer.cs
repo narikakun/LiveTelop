@@ -493,7 +493,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(678, 226);
+            this.tabPage5.Size = new System.Drawing.Size(684, 485);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "棒読みちゃん設定";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -588,7 +588,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(477, 6);
+            this.label15.Location = new System.Drawing.Point(477, 12);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(195, 19);
             this.label15.TabIndex = 4;
@@ -722,7 +722,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 3);
+            this.label8.Location = new System.Drawing.Point(6, 12);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(194, 19);
             this.label8.TabIndex = 1;
@@ -731,7 +731,7 @@
             // checkBox11
             // 
             this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(206, 2);
+            this.checkBox11.Location = new System.Drawing.Point(204, 11);
             this.checkBox11.Name = "checkBox11";
             this.checkBox11.Size = new System.Drawing.Size(131, 23);
             this.checkBox11.TabIndex = 0;
