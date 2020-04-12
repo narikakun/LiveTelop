@@ -218,13 +218,6 @@ namespace LiveTelop
             }
         }
 
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-            textBox1.Text = "2";
-            trackBar1.Value = 2;
-            f1.scrollspeed = 2;
-            checkBox7.Checked = false;
-        }
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
@@ -603,6 +596,13 @@ namespace LiveTelop
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "2";
+            trackBar1.Value = 2;
+            f1.scrollspeed = 2;
         }
     }
 }
