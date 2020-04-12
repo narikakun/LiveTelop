@@ -43,10 +43,8 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
-            this.label5 = new System.Windows.Forms.Label();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -120,6 +118,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -143,6 +146,9 @@
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -274,9 +280,11 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(206, 28);
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.ForeColor = System.Drawing.Color.Blue;
+            this.textBox2.Location = new System.Drawing.Point(594, 25);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(71, 26);
+            this.textBox2.Size = new System.Drawing.Size(71, 19);
             this.textBox2.TabIndex = 3;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
@@ -284,58 +292,42 @@
             // 
             // trackBar2
             // 
-            this.trackBar2.Location = new System.Drawing.Point(20, 28);
+            this.trackBar2.Location = new System.Drawing.Point(13, 49);
             this.trackBar2.Maximum = 3;
             this.trackBar2.Minimum = 1;
             this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(180, 45);
+            this.trackBar2.Size = new System.Drawing.Size(652, 45);
             this.trackBar2.TabIndex = 3;
             this.trackBar2.Value = 1;
             this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 19);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "背景パターン";
-            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(206, 98);
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.ForeColor = System.Drawing.Color.Blue;
+            this.textBox3.Location = new System.Drawing.Point(594, 28);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(71, 26);
+            this.textBox3.Size = new System.Drawing.Size(71, 19);
             this.textBox3.TabIndex = 3;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // trackBar3
             // 
-            this.trackBar3.Location = new System.Drawing.Point(20, 98);
+            this.trackBar3.Location = new System.Drawing.Point(13, 57);
             this.trackBar3.Maximum = 2;
             this.trackBar3.Minimum = 1;
             this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(180, 45);
+            this.trackBar3.Size = new System.Drawing.Size(652, 45);
             this.trackBar3.TabIndex = 2;
             this.trackBar3.TickFrequency = 5;
             this.trackBar3.Value = 1;
             this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 19);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "レイアウトパターン";
-            // 
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(20, 151);
+            this.checkBox9.Location = new System.Drawing.Point(8, 27);
             this.checkBox9.Margin = new System.Windows.Forms.Padding(5);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(167, 23);
@@ -467,17 +459,12 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.checkBox10);
-            this.tabPage3.Controls.Add(this.checkBox9);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.trackBar3);
-            this.tabPage3.Controls.Add(this.trackBar2);
-            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.groupBox13);
+            this.tabPage3.Controls.Add(this.groupBox12);
+            this.tabPage3.Controls.Add(this.groupBox11);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(684, 489);
+            this.tabPage3.Size = new System.Drawing.Size(684, 485);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "レイアウト設定";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -485,7 +472,7 @@
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(20, 184);
+            this.checkBox10.Location = new System.Drawing.Point(8, 60);
             this.checkBox10.Margin = new System.Windows.Forms.Padding(5);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(296, 23);
@@ -1132,6 +1119,61 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.label28);
+            this.groupBox11.Controls.Add(this.trackBar2);
+            this.groupBox11.Controls.Add(this.textBox2);
+            this.groupBox11.Location = new System.Drawing.Point(7, 3);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(671, 100);
+            this.groupBox11.TabIndex = 9;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "背景カラーパターン";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label28.Location = new System.Drawing.Point(9, 22);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(328, 16);
+            this.label28.TabIndex = 4;
+            this.label28.Text = "LiveTelopには現在カラーパターンが3種類あります。";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.label4);
+            this.groupBox12.Controls.Add(this.trackBar3);
+            this.groupBox12.Controls.Add(this.textBox3);
+            this.groupBox12.Location = new System.Drawing.Point(7, 109);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(671, 105);
+            this.groupBox12.TabIndex = 10;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "レイアウトパターン";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Location = new System.Drawing.Point(9, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(352, 32);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "LiveTelopには現在レイアウトパターンが2種類あります。\r\n”1”は、2行スタイル　”2”は、1行スタイルです。";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.checkBox9);
+            this.groupBox13.Controls.Add(this.checkBox10);
+            this.groupBox13.Location = new System.Drawing.Point(7, 220);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(671, 100);
+            this.groupBox13.TabIndex = 11;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "時計設定";
+            // 
             // Setting
             // 
             this.AllowDrop = true;
@@ -1159,7 +1201,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -1186,6 +1227,12 @@
             this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1205,10 +1252,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TrackBar trackBar2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TrackBar trackBar3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox9;
@@ -1284,5 +1329,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.GroupBox groupBox13;
     }
 }
