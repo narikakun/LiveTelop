@@ -1236,6 +1236,8 @@
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximumSize = new System.Drawing.Size(732, 593);
+            this.MinimumSize = new System.Drawing.Size(732, 593);
             this.Name = "Setting";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "LiveTelop Setting";
