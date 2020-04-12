@@ -51,6 +51,7 @@ namespace LiveTelop
         public bool eew_warning_wav = Properties.Settings.Default.eew_warning_wav;
         public bool eew_forms = Properties.Settings.Default.eew_form;
         public bool eew_form_show = false;
+        public int eew_form_time = Properties.Settings.Default.eew_form_time;
         eew_form ef;
 
         public Form1()

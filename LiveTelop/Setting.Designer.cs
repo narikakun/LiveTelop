@@ -52,6 +52,7 @@
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -89,7 +90,8 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.trackBar7 = new System.Windows.Forms.TrackBar();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -107,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -341,6 +344,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.trackBar7);
             this.tabPage1.Controls.Add(this.checkBox14);
             this.tabPage1.Controls.Add(this.checkBox13);
             this.tabPage1.Controls.Add(this.checkBox12);
@@ -358,6 +363,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "緊急地震速報設定";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(180, 64);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(104, 23);
+            this.checkBox14.TabIndex = 9;
+            this.checkBox14.Text = "表示画面";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
             // checkBox13
             // 
@@ -753,16 +769,26 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "ver.1.0.0.0";
             // 
-            // checkBox14
+            // trackBar7
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(180, 64);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(104, 23);
-            this.checkBox14.TabIndex = 9;
-            this.checkBox14.Text = "某配信風";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            this.trackBar7.LargeChange = 10;
+            this.trackBar7.Location = new System.Drawing.Point(300, 29);
+            this.trackBar7.Maximum = 60;
+            this.trackBar7.Name = "trackBar7";
+            this.trackBar7.Size = new System.Drawing.Size(157, 45);
+            this.trackBar7.SmallChange = 10;
+            this.trackBar7.TabIndex = 10;
+            this.trackBar7.TickFrequency = 10;
+            this.trackBar7.Scroll += new System.EventHandler(this.trackBar7_Scroll);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(296, 7);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(161, 19);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "表示画面表示秒数";
             // 
             // Setting
             // 
@@ -810,6 +836,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -878,5 +905,7 @@
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TrackBar trackBar7;
     }
 }

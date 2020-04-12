@@ -347,5 +347,17 @@ namespace LiveTelop.Properties {
                 this["IsUpgrade"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int eew_form_time {
+            get {
+                return ((int)(this["eew_form_time"]));
+            }
+            set {
+                this["eew_form_time"] = value;
+            }
+        }
     }
 }
