@@ -52,12 +52,12 @@
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.trackBar7 = new System.Windows.Forms.TrackBar();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -90,14 +90,40 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.label12 = new System.Windows.Forms.Label();
-            this.trackBar7 = new System.Windows.Forms.TrackBar();
-            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -109,7 +135,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -146,7 +175,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(16, 93);
+            this.checkBox5.Location = new System.Drawing.Point(10, 54);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(152, 23);
             this.checkBox5.TabIndex = 3;
@@ -157,7 +186,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(16, 64);
+            this.checkBox4.Location = new System.Drawing.Point(10, 25);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(152, 23);
             this.checkBox4.TabIndex = 2;
@@ -168,7 +197,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(16, 35);
+            this.checkBox3.Location = new System.Drawing.Point(8, 54);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(110, 23);
             this.checkBox3.TabIndex = 1;
@@ -179,7 +208,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(16, 6);
+            this.checkBox2.Location = new System.Drawing.Point(8, 25);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(110, 23);
             this.checkBox2.TabIndex = 0;
@@ -339,35 +368,48 @@
             this.tabControl1.Location = new System.Drawing.Point(16, 33);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(686, 259);
+            this.tabControl1.Size = new System.Drawing.Size(692, 518);
             this.tabControl1.TabIndex = 8;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.trackBar7);
-            this.tabPage1.Controls.Add(this.checkBox14);
-            this.tabPage1.Controls.Add(this.checkBox13);
-            this.tabPage1.Controls.Add(this.checkBox12);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.checkBox5);
-            this.tabPage1.Controls.Add(this.checkBox2);
-            this.tabPage1.Controls.Add(this.checkBox4);
-            this.tabPage1.Controls.Add(this.checkBox3);
-            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.groupBox7);
+            this.tabPage1.Controls.Add(this.groupBox6);
+            this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(678, 226);
+            this.tabPage1.Size = new System.Drawing.Size(684, 485);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "緊急地震速報設定";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(185, 55);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(161, 19);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "表示画面表示秒数";
+            // 
+            // trackBar7
+            // 
+            this.trackBar7.LargeChange = 10;
+            this.trackBar7.Location = new System.Drawing.Point(352, 54);
+            this.trackBar7.Maximum = 60;
+            this.trackBar7.Name = "trackBar7";
+            this.trackBar7.Size = new System.Drawing.Size(157, 45);
+            this.trackBar7.SmallChange = 10;
+            this.trackBar7.TabIndex = 10;
+            this.trackBar7.TickFrequency = 10;
+            this.trackBar7.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar7.Scroll += new System.EventHandler(this.trackBar7_Scroll);
+            // 
             // checkBox14
             // 
             this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(180, 64);
+            this.checkBox14.Location = new System.Drawing.Point(189, 25);
             this.checkBox14.Name = "checkBox14";
             this.checkBox14.Size = new System.Drawing.Size(104, 23);
             this.checkBox14.TabIndex = 9;
@@ -378,7 +420,7 @@
             // checkBox13
             // 
             this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(180, 35);
+            this.checkBox13.Location = new System.Drawing.Point(6, 54);
             this.checkBox13.Name = "checkBox13";
             this.checkBox13.Size = new System.Drawing.Size(110, 23);
             this.checkBox13.TabIndex = 8;
@@ -389,7 +431,7 @@
             // checkBox12
             // 
             this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(180, 6);
+            this.checkBox12.Location = new System.Drawing.Point(8, 25);
             this.checkBox12.Name = "checkBox12";
             this.checkBox12.Size = new System.Drawing.Size(110, 23);
             this.checkBox12.TabIndex = 7;
@@ -397,33 +439,14 @@
             this.checkBox12.UseVisualStyleBackColor = true;
             this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 119);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 19);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "表示テキスト設定";
-            // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(16, 141);
+            this.textBox4.Location = new System.Drawing.Point(6, 25);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(656, 79);
+            this.textBox4.Size = new System.Drawing.Size(644, 69);
             this.textBox4.TabIndex = 4;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(287, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(735, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // tabPage2
             // 
@@ -473,7 +496,7 @@
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(678, 226);
+            this.tabPage3.Size = new System.Drawing.Size(684, 489);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "レイアウト設定";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -769,33 +792,301 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "ver.1.0.0.0";
             // 
-            // trackBar7
+            // groupBox5
             // 
-            this.trackBar7.LargeChange = 10;
-            this.trackBar7.Location = new System.Drawing.Point(300, 29);
-            this.trackBar7.Maximum = 60;
-            this.trackBar7.Name = "trackBar7";
-            this.trackBar7.Size = new System.Drawing.Size(157, 45);
-            this.trackBar7.SmallChange = 10;
-            this.trackBar7.TabIndex = 10;
-            this.trackBar7.TickFrequency = 10;
-            this.trackBar7.Scroll += new System.EventHandler(this.trackBar7_Scroll);
+            this.groupBox5.Controls.Add(this.groupBox8);
+            this.groupBox5.Controls.Add(this.checkBox2);
+            this.groupBox5.Controls.Add(this.checkBox14);
+            this.groupBox5.Controls.Add(this.trackBar7);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.checkBox3);
+            this.groupBox5.Location = new System.Drawing.Point(6, 9);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(672, 368);
+            this.groupBox5.TabIndex = 12;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "表示設定";
             // 
-            // label16
+            // groupBox6
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(296, 7);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(161, 19);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "表示画面表示秒数";
+            this.groupBox6.Controls.Add(this.checkBox12);
+            this.groupBox6.Controls.Add(this.checkBox13);
+            this.groupBox6.Location = new System.Drawing.Point(14, 377);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(200, 100);
+            this.groupBox6.TabIndex = 13;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "音声";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.checkBox4);
+            this.groupBox7.Controls.Add(this.checkBox5);
+            this.groupBox7.Location = new System.Drawing.Point(220, 377);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(200, 100);
+            this.groupBox7.TabIndex = 14;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "デモモード";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.textBox20);
+            this.groupBox8.Controls.Add(this.textBox19);
+            this.groupBox8.Controls.Add(this.textBox18);
+            this.groupBox8.Controls.Add(this.textBox17);
+            this.groupBox8.Controls.Add(this.textBox16);
+            this.groupBox8.Controls.Add(this.label27);
+            this.groupBox8.Controls.Add(this.label26);
+            this.groupBox8.Controls.Add(this.label25);
+            this.groupBox8.Controls.Add(this.label24);
+            this.groupBox8.Controls.Add(this.label23);
+            this.groupBox8.Controls.Add(this.textBox15);
+            this.groupBox8.Controls.Add(this.label22);
+            this.groupBox8.Controls.Add(this.textBox14);
+            this.groupBox8.Controls.Add(this.label21);
+            this.groupBox8.Controls.Add(this.label20);
+            this.groupBox8.Controls.Add(this.textBox13);
+            this.groupBox8.Controls.Add(this.textBox12);
+            this.groupBox8.Controls.Add(this.label19);
+            this.groupBox8.Controls.Add(this.textBox11);
+            this.groupBox8.Controls.Add(this.textBox10);
+            this.groupBox8.Controls.Add(this.textBox9);
+            this.groupBox8.Controls.Add(this.label18);
+            this.groupBox8.Controls.Add(this.label17);
+            this.groupBox8.Controls.Add(this.label6);
+            this.groupBox8.Controls.Add(this.textBox4);
+            this.groupBox8.Location = new System.Drawing.Point(8, 83);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(656, 279);
+            this.groupBox8.TabIndex = 12;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "表示テキスト書式";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 19);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "時間：年";
+            this.label6.Click += new System.EventHandler(this.label6_Click_1);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 130);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(76, 19);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "時間：月";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 159);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(76, 19);
+            this.label18.TabIndex = 7;
+            this.label18.Text = "時間：日";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(88, 98);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(119, 26);
+            this.textBox9.TabIndex = 8;
+            this.textBox9.Text = "{time:y}";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(88, 127);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(119, 26);
+            this.textBox10.TabIndex = 9;
+            this.textBox10.Text = "{time:M}";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(88, 156);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(119, 26);
+            this.textBox11.TabIndex = 10;
+            this.textBox11.Text = "{time:d}";
+            this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 188);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(76, 19);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "時間：時";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(88, 185);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(119, 26);
+            this.textBox12.TabIndex = 12;
+            this.textBox12.Text = "{time:H}";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(88, 214);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(119, 26);
+            this.textBox13.TabIndex = 13;
+            this.textBox13.Text = "{time:m}";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 217);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(76, 19);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "時間：分";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 246);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(76, 19);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "時間：秒";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(88, 243);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
+            this.textBox14.Size = new System.Drawing.Size(119, 26);
+            this.textBox14.TabIndex = 16;
+            this.textBox14.Text = "{time:m}";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(249, 101);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(88, 19);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "警報フラグ";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(378, 185);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
+            this.textBox15.Size = new System.Drawing.Size(119, 26);
+            this.textBox15.TabIndex = 18;
+            this.textBox15.Text = "{calcintensity}";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(249, 130);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(85, 19);
+            this.label23.TabIndex = 19;
+            this.label23.Text = "電文番号";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(249, 159);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 19);
+            this.label24.TabIndex = 20;
+            this.label24.Text = "震源";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(249, 188);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(123, 19);
+            this.label25.TabIndex = 21;
+            this.label25.Text = "最大予想震度";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(249, 217);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(41, 19);
+            this.label26.TabIndex = 22;
+            this.label26.Text = "深さ";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(249, 246);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(110, 19);
+            this.label27.TabIndex = 23;
+            this.label27.Text = "マグニチュード";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(378, 156);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
+            this.textBox16.Size = new System.Drawing.Size(119, 26);
+            this.textBox16.TabIndex = 24;
+            this.textBox16.Text = "{regionname}";
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(378, 127);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
+            this.textBox17.Size = new System.Drawing.Size(119, 26);
+            this.textBox17.TabIndex = 25;
+            this.textBox17.Text = "{reportnum}";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(378, 98);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
+            this.textBox18.Size = new System.Drawing.Size(119, 26);
+            this.textBox18.TabIndex = 26;
+            this.textBox18.Text = "{alertflg}";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(378, 214);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.ReadOnly = true;
+            this.textBox19.Size = new System.Drawing.Size(119, 26);
+            this.textBox19.TabIndex = 27;
+            this.textBox19.Text = "{depth}";
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(378, 243);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.ReadOnly = true;
+            this.textBox20.Size = new System.Drawing.Size(119, 26);
+            this.textBox20.TabIndex = 28;
+            this.textBox20.Text = "{magunitude}";
             // 
             // Setting
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 304);
+            this.ClientSize = new System.Drawing.Size(716, 554);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label2);
@@ -804,8 +1095,6 @@
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.MaximumSize = new System.Drawing.Size(730, 343);
-            this.MinimumSize = new System.Drawing.Size(730, 343);
             this.Name = "Setting";
             this.helpProvider1.SetShowHelp(this, true);
             this.Text = "LiveTelop Setting";
@@ -816,8 +1105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -836,7 +1124,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -871,12 +1166,10 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBox11;
@@ -907,5 +1200,33 @@
         private System.Windows.Forms.CheckBox checkBox14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TrackBar trackBar7;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label19;
     }
 }

@@ -350,7 +350,7 @@ namespace LiveTelop.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int eew_form_time {
             get {
                 return ((int)(this["eew_form_time"]));
