@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -455,9 +456,16 @@ namespace LiveTelop
         {
             try
             {
-                WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
-                var sends = "http://" + f1.bouyomi_ip + ":" + f1.bouyomi_port + "/pause";
-                wc.DownloadString(sends);
+                if (Process.GetProcessesByName("BouyomiChan").Length > 0)
+                {
+                    WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
+                    var sends = "http://" + f1.bouyomi_ip + ":" + f1.bouyomi_port + "/pause";
+                    wc.DownloadString(sends);
+                }
+                else
+                {
+                    MessageBox.Show("棒読みちゃんが起動していません。");
+                }
             }
             catch (System.Net.WebException)
             {
@@ -469,9 +477,16 @@ namespace LiveTelop
         {
             try
             {
-                WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
-                var sends = "http://" + f1.bouyomi_ip + ":" + f1.bouyomi_port + "/resume";
-                wc.DownloadString(sends);
+                if (Process.GetProcessesByName("BouyomiChan").Length > 0)
+                {
+                    WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
+                    var sends = "http://" + f1.bouyomi_ip + ":" + f1.bouyomi_port + "/resume";
+                    wc.DownloadString(sends);
+                }
+                else
+                {
+                    MessageBox.Show("棒読みちゃんが起動していません。");
+                }
             }
             catch (System.Net.WebException)
             {
@@ -483,9 +498,16 @@ namespace LiveTelop
         {
             try
             {
-                WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
-                var sends = "http://" + f1.bouyomi_ip + ":" + f1.bouyomi_port + "/skip";
-                wc.DownloadString(sends);
+                if (Process.GetProcessesByName("BouyomiChan").Length > 0)
+                {
+                    WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
+                    var sends = "http://" + f1.bouyomi_ip + ":" + f1.bouyomi_port + "/skip";
+                    wc.DownloadString(sends);
+                }
+                else
+                {
+                    MessageBox.Show("棒読みちゃんが起動していません。");
+                }
             }
             catch (System.Net.WebException)
             {
@@ -497,9 +519,15 @@ namespace LiveTelop
         {
             try
             {
-                WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
-                var sends = "http://" + f1.bouyomi_ip + ":" + f1.bouyomi_port + "/clear";
-                wc.DownloadString(sends);
+                if (Process.GetProcessesByName("BouyomiChan").Length > 0)
+                {
+                    WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
+                    var sends = "http://" + f1.bouyomi_ip + ":" + f1.bouyomi_port + "/clear";
+                    wc.DownloadString(sends);
+                } else
+                {
+                    MessageBox.Show("棒読みちゃんが起動していません。");
+                }
             }
             catch (System.Net.WebException)
             {

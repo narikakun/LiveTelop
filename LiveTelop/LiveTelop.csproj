@@ -71,6 +71,9 @@
       <DependentUpon>Setting.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="eew_form.nd.resx">
+      <DependentUpon>eew_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="eew_form.resx">
       <DependentUpon>eew_form.cs</DependentUpon>
     </EmbeddedResource>

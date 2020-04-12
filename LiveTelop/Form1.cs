@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -1046,13 +1047,16 @@ namespace LiveTelop
             {
                 try
                 {
-                    WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
-                    var sends = "http://" + bouyomi_ip + ":" + bouyomi_port + "/talk?text=" + text;
-                    if (bouyomi_type != 0) { sends += "&voice=" + bouyomi_type; };
-                    if (bouyomi_volume != -1) { sends += "&volume=" + bouyomi_volume; };
-                    if (bouyomi_speed != 49) { sends += "&speed=" + bouyomi_speed; };
-                    if (bouyomi_pitch != 49) { sends += "&tone=" + bouyomi_pitch; };
-                    wc.DownloadString(sends);
+                    if (Process.GetProcessesByName("BouyomiChan").Length > 0)
+                    {
+                        WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
+                        var sends = "http://" + bouyomi_ip + ":" + bouyomi_port + "/talk?text=" + text;
+                        if (bouyomi_type != 0) { sends += "&voice=" + bouyomi_type; };
+                        if (bouyomi_volume != -1) { sends += "&volume=" + bouyomi_volume; };
+                        if (bouyomi_speed != 49) { sends += "&speed=" + bouyomi_speed; };
+                        if (bouyomi_pitch != 49) { sends += "&tone=" + bouyomi_pitch; };
+                        wc.DownloadString(sends);
+                    }
                 }
                 catch (System.Net.WebException)
                 {

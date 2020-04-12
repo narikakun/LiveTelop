@@ -23,6 +23,18 @@ namespace LiveTelop
         private void eew_form_Load(object sender, EventArgs e)
         {
             f1.eew_form_show = true;
+            if (Properties.Settings.Default.EEWSize.Width == 0) Properties.Settings.Default.Upgrade();
+            if (Properties.Settings.Default.EEWSize.Width == 0 || Properties.Settings.Default.F1Size.Height == 0)
+            {
+
+            }
+            else
+            {
+                this.WindowState = Properties.Settings.Default.EEWState;
+                if (this.WindowState == FormWindowState.Minimized) this.WindowState = FormWindowState.Normal;
+                this.Location = Properties.Settings.Default.EEWLocation;
+                this.Size = Properties.Settings.Default.EEWSize;
+            }
         }
 
         private void eew_form_FormClosed(object sender, FormClosedEventArgs e)

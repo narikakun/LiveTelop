@@ -362,13 +362,37 @@ namespace LiveTelop.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 17")]
         public global::System.Drawing.Point EEWLocation {
             get {
                 return ((global::System.Drawing.Point)(this["EEWLocation"]));
             }
             set {
                 this["EEWLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
+        public global::System.Windows.Forms.FormWindowState EEWState {
+            get {
+                return ((global::System.Windows.Forms.FormWindowState)(this["EEWState"]));
+            }
+            set {
+                this["EEWState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size EEWSize {
+            get {
+                return ((global::System.Drawing.Size)(this["EEWSize"]));
+            }
+            set {
+                this["EEWSize"] = value;
             }
         }
     }
