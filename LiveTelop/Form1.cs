@@ -66,6 +66,7 @@ namespace LiveTelop
             BetaCheck();
             EEW_DemoCheck();
             ef = new eew_form(this);
+            eew_form_timer.Interval = eew_form_time * 1000;
             if (Properties.Settings.Default.IsUpgrade == false)
             {
                 Properties.Settings.Default.Upgrade();
@@ -968,6 +969,11 @@ namespace LiveTelop
                                     ef.label10.Text = "";
                                 }
                             }
+                            if (eew_form_time != 0)
+                            {
+                                eew_form_timer.Start();
+                            }
+
                         }
                         last_requesttime = eewJson(eew_json).Head.RequestTime;
                         last_reportid = eewJson(eew_json).Head.ReportId;
@@ -1131,6 +1137,14 @@ namespace LiveTelop
                 title_main_showhide = true;
                 pictureBox1.Show();
             }
+        }
+
+        private void eew_form_timer_Tick(object sender, EventArgs e)
+        {
+            eew_form_timer.Stop();
+            eew_form_show = false;
+            ef.Dispose();
+            ef = new eew_form(this);
         }
     }
 }

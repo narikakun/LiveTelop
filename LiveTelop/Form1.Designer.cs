@@ -46,6 +46,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.title_timer = new System.Windows.Forms.Timer(this.components);
             this.title_main = new System.Windows.Forms.Label();
+            this.eew_form_timer = new System.Windows.Forms.Timer(this.components);
             this.telop_panel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -185,6 +186,10 @@
             this.title_main.TabIndex = 5;
             this.title_main.Text = "タイトルメイン";
             // 
+            // eew_form_timer
+            // 
+            this.eew_form_timer.Tick += new System.EventHandler(this.eew_form_timer_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -232,6 +237,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer title_timer;
         private System.Windows.Forms.Label title_main;
+        public System.Windows.Forms.Timer eew_form_timer;
     }
 }
 

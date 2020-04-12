@@ -79,6 +79,14 @@ namespace LiveTelop
             textBox8.Text = Convert.ToString(Properties.Settings.Default.bouyomi_type);
             checkBox14.Checked = Properties.Settings.Default.eew_form;
             trackBar7.Value = Properties.Settings.Default.eew_form_time;
+            if (trackBar7.Value == 0)
+            {
+                label16.Text = "表示画面表示秒数（無効）";
+            }
+            else
+            {
+                label16.Text = "表示画面表示秒数（" + trackBar7.Value + "秒）";
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -551,6 +559,7 @@ namespace LiveTelop
                 label16.Text = "表示画面表示秒数（" + trackBar7.Value + "秒）";
             }
             f1.eew_form_time = trackBar7.Value;
+            f1.eew_form_timer.Interval = trackBar7.Value * 1000;
         }
     }
 }
