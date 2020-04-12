@@ -359,5 +359,17 @@ namespace LiveTelop.Properties {
                 this["eew_form_time"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point EEWLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["EEWLocation"]));
+            }
+            set {
+                this["EEWLocation"] = value;
+            }
+        }
     }
 }

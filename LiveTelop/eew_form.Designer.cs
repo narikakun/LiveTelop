@@ -32,11 +32,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,6 +80,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1094, 51);
             this.panel2.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("HGSｺﾞｼｯｸE", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(792, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(147, 33);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "発生日時";
             // 
             // label9
             // 
@@ -132,17 +143,6 @@
             this.label6.Size = new System.Drawing.Size(35, 35);
             this.label6.TabIndex = 4;
             this.label6.Text = "3";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("HGSｺﾞｼｯｸE", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(792, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 33);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "発生日時";
             // 
             // label4
             // 
@@ -197,7 +197,9 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("Location", global::LiveTelop.Properties.Settings.Default, "EEWLocation", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Location = global::LiveTelop.Properties.Settings.Default.EEWLocation;
             this.Name = "eew_form";
             this.Text = "緊急地震速報表示画面";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.eew_form_FormClosed);

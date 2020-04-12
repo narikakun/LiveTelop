@@ -557,9 +557,9 @@ namespace LiveTelop
             else
             {
                 label16.Text = "表示画面表示秒数（" + trackBar7.Value + "秒）";
+                f1.eew_form_timer.Interval = trackBar7.Value * 1000;
             }
             f1.eew_form_time = trackBar7.Value;
-            f1.eew_form_timer.Interval = trackBar7.Value * 1000;
         }
     }
 }
