@@ -84,14 +84,31 @@ namespace LiveTelop
             BGMStart();
         }
 
+        public SoundPlayer bgm_player;
+
         public void BGMStart()
         {
-            if (bgm)
+            if (eew_status)
             {
-                if (bgm_url != "")
+                bgm_player.Stop();
+            }
+            else
+            {
+                if (bgm)
                 {
-                    SoundPlayer player = new SoundPlayer(@"" + bgm_url);
-                    player.PlayLooping();
+                    if (bgm_url != "")
+                    {
+                        bgm_player = new SoundPlayer(@"" + bgm_url);
+                        bgm_player.PlayLooping();
+                    }
+                    else
+                    {
+                        bgm_player.Stop();
+                    }
+                }
+                else
+                {
+                    bgm_player.Stop();
                 }
             }
         }
@@ -873,6 +890,7 @@ namespace LiveTelop
                     telop_text.Location = new Point(telop_panel.Size.Width, 1);
                     bool eew_status_flg = false;
                     telop_timer.BackColor = TransparencyKey;
+                    BGMStart();
                     if (eewJson(eew_json).Head.AlertFlg == "予報")
                     {
                         if (eew_forecast == true)
@@ -1026,6 +1044,7 @@ namespace LiveTelop
                         ef = new eew_form(this);
                         eew_status = false;
                         TelopLevelCheck();
+                        BGMStart();
                     }
                 }
             }
