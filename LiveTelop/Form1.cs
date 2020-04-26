@@ -84,7 +84,7 @@ namespace LiveTelop
             BGMStart();
         }
 
-        private void BGMStart()
+        public void BGMStart()
         {
             if (bgm)
             {

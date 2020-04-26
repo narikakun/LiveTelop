@@ -91,6 +91,7 @@ namespace LiveTelop
             textBox21.Text = Properties.Settings.Default.eew_m_f;
             textBox22.Text = Properties.Settings.Default.eew_m_w;
             textBox23.Text = Properties.Settings.Default.bgm_url;
+            checkBox7.Checked = Properties.Settings.Default.bgm;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -135,6 +136,7 @@ namespace LiveTelop
             Properties.Settings.Default.eew_m_f = textBox21.Text;
             Properties.Settings.Default.eew_m_w = textBox22.Text;
             Properties.Settings.Default.bgm_url = textBox23.Text;
+            Properties.Settings.Default.bgm = checkBox7.Checked;
             Properties.Settings.Default.Save();
         }
 
@@ -663,6 +665,7 @@ namespace LiveTelop
             {
                 f1.bgm = false;
             }
+            f1.BGMStart();
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -678,12 +681,14 @@ namespace LiveTelop
             {
                 textBox23.Text = ofd.FileName;
                 f1.bgm_url = textBox23.Text;
+                f1.BGMStart();
             }
         }
 
         private void textBox23_TextChanged(object sender, EventArgs e)
         {
             f1.bgm_url = textBox23.Text;
+            f1.BGMStart();
         }
     }
 }
