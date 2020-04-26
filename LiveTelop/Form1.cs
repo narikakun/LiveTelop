@@ -196,7 +196,7 @@ namespace LiveTelop
                         ps.Add("error_content", "TelopContentSet " + error_content.ToString());
                         ps.Add("appname", "LiveTelop");
                         ps.Add("appinfo", ver.ToString());
-                        byte[] resData = wc.UploadValues("https://dev.narikakun.net/webapi/soft_error_report", ps);
+                        byte[] resData = wc.UploadValues("https://api.narikakun.net/livetelop/soft_error_report.php", ps);
                         wc.Dispose();
                         string resText = System.Text.Encoding.UTF8.GetString(resData);
                         if (errorreportjson(resText).status == 200)
@@ -639,7 +639,7 @@ namespace LiveTelop
                         ps.Add("error_content", "TelopLevelCheck " + error_content.ToString());
                         ps.Add("appname", "LiveTelop");
                         ps.Add("appinfo", ver.ToString());
-                        byte[] resData = wc.UploadValues("https://dev.narikakun.net/webapi/soft_error_report", ps);
+                        byte[] resData = wc.UploadValues("https://api.narikakun.net/livetelop/soft_error_report.php", ps);
                         wc.Dispose();
                         string resText = System.Text.Encoding.UTF8.GetString(resData);
                         if (errorreportjson(resText).status == 200)
@@ -1042,7 +1042,7 @@ namespace LiveTelop
                         ps.Add("error_content", "eew_checktimer_Tick " + error_content.ToString());
                         ps.Add("appname", "LiveTelop");
                         ps.Add("appinfo", ver.ToString());
-                        byte[] resData = wc.UploadValues("https://dev.narikakun.net/webapi/soft_error_report", ps);
+                        byte[] resData = wc.UploadValues("https://api.narikakun.net/livetelop/soft_error_report.php", ps);
                         wc.Dispose();
                         string resText = System.Text.Encoding.UTF8.GetString(resData);
                         if (errorreportjson(resText).status == 200)
@@ -1116,7 +1116,7 @@ namespace LiveTelop
                 ps.Add("error_content", "テスト");
                 ps.Add("appname", "LiveTelop");
                 ps.Add("appinfo", ver.ToString());
-                byte[] resData = wc.UploadValues("https://dev.narikakun.net/webapi/soft_error_report", ps);
+                byte[] resData = wc.UploadValues("https://api.narikakun.net/livetelop/soft_error_report.php", ps);
                 wc.Dispose();
                 string resText = System.Text.Encoding.UTF8.GetString(resData);
                 if (errorreportjson(resText).status == 200)

@@ -90,6 +90,7 @@ namespace LiveTelop
             }
             textBox21.Text = Properties.Settings.Default.eew_m_f;
             textBox22.Text = Properties.Settings.Default.eew_m_w;
+            textBox23.Text = Properties.Settings.Default.bgm_url;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -133,6 +134,7 @@ namespace LiveTelop
             Properties.Settings.Default.eew_form_time = trackBar7.Value;
             Properties.Settings.Default.eew_m_f = textBox21.Text;
             Properties.Settings.Default.eew_m_w = textBox22.Text;
+            Properties.Settings.Default.bgm_url = textBox23.Text;
             Properties.Settings.Default.Save();
         }
 
@@ -649,6 +651,39 @@ namespace LiveTelop
         private void textBox22_TextChanged(object sender, EventArgs e)
         {
             f1.eew_m_w = textBox22.Text;
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox7.Checked == true)
+            {
+                f1.bgm = true;
+            }
+            else
+            {
+                f1.bgm = false;
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "wavファイル(*.wav)|*.wav;";
+            ofd.FilterIndex = 1;
+            ofd.Title = "開くwavファイルを選択してください";
+            ofd.RestoreDirectory = true;
+            ofd.CheckFileExists = true;
+            ofd.CheckPathExists = true;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                textBox23.Text = ofd.FileName;
+                f1.bgm_url = textBox23.Text;
+            }
+        }
+
+        private void textBox23_TextChanged(object sender, EventArgs e)
+        {
+            f1.bgm_url = textBox23.Text;
         }
     }
 }
