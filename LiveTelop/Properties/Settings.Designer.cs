@@ -419,5 +419,29 @@ namespace LiveTelop.Properties {
                 this["eew_m_w"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool bgm {
+            get {
+                return ((bool)(this["bgm"]));
+            }
+            set {
+                this["bgm"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string bgm_url {
+            get {
+                return ((string)(this["bgm_url"]));
+            }
+            set {
+                this["bgm_url"] = value;
+            }
+        }
     }
 }

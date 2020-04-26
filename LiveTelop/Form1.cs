@@ -55,6 +55,8 @@ namespace LiveTelop
         public int eew_form_time = Properties.Settings.Default.eew_form_time;
         public string eew_m_f = Properties.Settings.Default.eew_m_f;
         public string eew_m_w = Properties.Settings.Default.eew_m_w;
+        public bool bgm = Properties.Settings.Default.bgm;
+        public string bgm_url = Properties.Settings.Default.bgm_url;
         eew_form ef;
 
         public Form1()
@@ -79,8 +81,21 @@ namespace LiveTelop
                 Properties.Settings.Default.IsUpgrade = true;
                 Properties.Settings.Default.Save();
             }
+            BGMStart();
         }
-        
+
+        private void BGMStart()
+        {
+            if (bgm)
+            {
+                if (bgm_url != "")
+                {
+                    SoundPlayer player = new SoundPlayer(@"" + bgm_url);
+                    player.PlayLooping();
+                }
+            }
+        }
+
         public void BetaCheck()
         {
             if (beta_status == true)
@@ -1088,9 +1103,44 @@ namespace LiveTelop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            eew_url = "https://api.narikakun.net/eew/warning.php?time=20200213193455";
+            //eew_url = "https://api.narikakun.net/eew/warning.php?time=20200213193455";
             //ef.label6.Text = "7+";
             //NHKsokuhoCheck("テスト");
+            try
+            {
+                System.Diagnostics.FileVersionInfo ver = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                System.OperatingSystem os = System.Environment.OSVersion;
+                WebClient wc = new WebClient() { Encoding = Encoding.GetEncoding("UTF-8") };
+                NameValueCollection ps = new NameValueCollection();
+                ps.Add("os_info", "os:" + os.ToString());
+                ps.Add("error_content", "テスト");
+                ps.Add("appname", "LiveTelop");
+                ps.Add("appinfo", ver.ToString());
+                byte[] resData = wc.UploadValues("https://dev.narikakun.net/webapi/soft_error_report", ps);
+                wc.Dispose();
+                string resText = System.Text.Encoding.UTF8.GetString(resData);
+                if (errorreportjson(resText).status == 200)
+                {
+                    notify.BalloonTipTitle = "LiveTelop";
+                    notify.BalloonTipIcon = ToolTipIcon.Info;
+                    notify.BalloonTipText = "エラーが発生したため自動報告しました。";
+                    notify.ShowBalloonTip(3000);
+                }
+                else
+                {
+                    notify.BalloonTipTitle = "LiveTelop";
+                    notify.BalloonTipIcon = ToolTipIcon.Error;
+                    notify.BalloonTipText = "エラー自動報告に失敗しました。";
+                    notify.ShowBalloonTip(3000);
+                }
+            }
+            catch (System.Net.WebException report_error_content)
+            {
+                notify.BalloonTipTitle = "LiveTelop";
+                notify.BalloonTipIcon = ToolTipIcon.Error;
+                notify.BalloonTipText = "エラー自動報告サーバーに接続できません。";
+                notify.ShowBalloonTip(3000);
+            }
         }
 
         private void 設定ToolStripMenuItem_Click(object sender, EventArgs e)
