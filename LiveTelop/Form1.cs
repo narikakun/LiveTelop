@@ -85,12 +85,16 @@ namespace LiveTelop
         }
 
         public SoundPlayer bgm_player;
+        public bool bgm_status = false;
 
         public void BGMStart()
         {
             if (eew_status)
             {
-                bgm_player.Stop();
+                if (bgm_status)
+                {
+                    bgm_player.Stop();
+                }
             }
             else
             {
@@ -98,17 +102,26 @@ namespace LiveTelop
                 {
                     if (bgm_url != "")
                     {
-                        bgm_player = new SoundPlayer(@"" + bgm_url);
-                        bgm_player.PlayLooping();
+                        if (bgm_status == false)
+                        {
+                            bgm_player = new SoundPlayer(@"" + bgm_url);
+                            bgm_player.PlayLooping();
+                        }
                     }
                     else
                     {
-                        bgm_player.Stop();
+                        if (bgm_status)
+                        {
+                            bgm_player.Stop();
+                        }
                     }
                 }
                 else
                 {
-                    bgm_player.Stop();
+                    if (bgm_status)
+                    {
+                        bgm_player.Stop();
+                    }
                 }
             }
         }
